@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  linkaja-db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=linkaja
+  app:
+    container_name: linkaja-apps
+    image: linkaja-apps
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - linkaja-db

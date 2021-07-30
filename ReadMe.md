@@ -7,7 +7,7 @@
 1. Buka Terminal pada folder project ini
 2. Lakukan Compile pada project maven
 ````
-    mvnw clean install
+    .\mvnw clean install
 ````
 3. Jalankan Docker Compose
 ````
